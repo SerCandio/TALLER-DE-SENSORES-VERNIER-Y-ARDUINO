@@ -27,6 +27,8 @@ static float map(const float x, const float in_min, const float in_max, const fl
     //                              b : intercepto
     //Se usa para convertir un dato en cierto rango de entrada
     //hacia otro de salida
+
+    if(x<in_min) return 0.0f;
     
     return ((out_max - out_min) / (in_max - in_min)) * (x - in_min) + out_min;
     
